@@ -3,7 +3,7 @@ const port = process.env.PORT || 3000;
 
 const handler = (req, res) => {
     console.log('Server received request!🍎');
-    res.end('Hello from GitHub updated!');
+    res.end('Hello from GitHub updated!' + process.env.MY_ENV_STRING);
 }
 const server = http.createServer(handler);
 server.listen (port, err => {
